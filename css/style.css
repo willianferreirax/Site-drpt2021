@@ -25,3 +25,17 @@ main,section,header{
 .banner{
     background-image: url(../imagens/andromeda.jpg);
 }
+.footer{
+    width: 100%;
+    height: 20vh;
+    padding: 0 15px;
+    background-color: #C0C0C0;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.follow {
+    margin: 0 10px;
+    font-size: 22px;
+}
