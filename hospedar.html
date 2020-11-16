@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
-    <title>Andromeda Centaurus Expeditions</title>
+    <title>Andromeda Centaurus Expeditions - Hospede-se</title>
 </head>
 <body>
     <header>
@@ -22,29 +22,87 @@
           </nav>
     </header>
 
-    <main>
-        <form action="" class="container  mt-4 mb-4 p-4 bg-secondary col-md-6 text-center">
-            <div class="bg-info text-light mb-4 p-4 ">
-                Envie-nos uma mensagem
+    <main class="p-4">
+        <form action="" class="container  my-4 p-4 bg-light font-weight-bold rounded shadow">
+            <div class="bg-primary text-warning mb-4 p-4 text-center">
+                Cadastre-se para a viagem
             </div>
-            <p><input type="text" placeholder="Nome do responsavel" autofocus required class="form-control col-md"></p>
-            <p><input type="email" placeholder="Email do responsavel" required class="form-control col-md"></p>
-            <p><input type="text" placeholder="quant pessoas" autofocus required class="form-control col-md"></p>
-            <p><input type="text" placeholder="data viagem" autofocus required class="form-control col-md"></p>    
-            <p>
-                    <select class="form-control col-md">
-                        <option value="0">Selecione o local</option>
-                        <option value="1">Dúvida</option>
-                        <option value="2">Fazer uma sugestão</option>
-                        <option value="3">Fazer uma solicitação</option>
-                        <option value="4">Comentário</option>
-                    </select>
-                </p>
-                <p><textarea placeholder="Mensagem" class="form-control col-md"></textarea> </p>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+
+            <div class="row">
+                <div class="col-md">
+                    <p>
+                        <label for="name">Nome do responsável</label>
+                        <input type="text" id="name" placeholder="Nome do responsavel" autofocus required class="form-control mb-4">
+                    </p>
+
+                    <p>
+                        <label for="email">Email do responsável</label>
+                        <input type="email" id="email" placeholder="Email do responsavel" required class="form-control mb-4">
+                    </p>
+
+                    <p>
+                        <label for="birthday">Data de nascimento do responsável</label>
+                        <input type="date" id="birthday" required class="form-control mb-4">
+                    </p>
+                </div>
+    
+                <div class="col-md">
+                    <p>
+                        <label for="quantity">Quantidade de pessoas</label>
+                        <input type="number" placeholder="Quantas pessoas irão viajar?" id="quantity" name="quantity" min="1" max="4" required class="form-control mb-4">
+                    </p>
+                    
+                    <p>
+                        <label for="trip_date">Data da viagem</label>
+                        <input type="data" id="trip_date" required class="form-control mb-4">
+                    </p>    
+                    <p class="font-weight-bold">Local de viagem</p>
+                    <div class="row font-weight-bold text-center">
+                        
+                        <div class="col-md ">
+                            <p>  
+                                <input type="radio" name="place" id="montain">
+                                <label for="montain">Montanhas Aleluia</label>
+                            </p>
+        
+                            <p>
+                                <input type="radio" name="place" id="tree">
+                                <label for="tree">Árvore Lar</label>
+                            </p>
+        
+                        </div>
+
+                        <div class="col-md ">
+                            <p>  
+                                <input type="radio" name="place" id="beach">
+                                <label for="beach">Praia</label>
+                            </p>
+        
+                            <p>
+                                <input type="radio" name="place" id="soul">
+                                <label for="montain">Árvore das Almas</label>
+                            </p>
+        
+                        </div>
+                        
+                    </div>
+                   
+                    
+                   
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary font-weight-bold text-warning" id="botao">Enviar</button>
+            </div>
+           
         </form>
         
     </main>
+
+    <div id="result">
+
+    </div>
 
     <footer class="footer font-weight-bold">
         <div>@2160 Alpha Centauri Expeditions</div>
@@ -59,5 +117,6 @@
             <i class="fab fa-facebook-square follow text-primary"></i>
         </div>
     </footer>
+    <script src="./js/hospedar.js"></script>
 </body>
 </html>
