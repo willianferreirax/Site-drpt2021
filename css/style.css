@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-main,section,header{
+main,section,header,div{
      font-family: 'Lato', sans-serif;
 }
 
