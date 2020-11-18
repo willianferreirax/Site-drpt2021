@@ -46,12 +46,13 @@ function Exibir(evento){
 
     if(!document.querySelector('thead')){
         table = document.createElement('table')
-        table.classList.add('table','table-hover','text-center','table-responsive','table-borderless','shadow')
+        table.classList.add('table','table-hover','text-center','table-borderless','shadow')
 
         const thead = document.createElement('thead')
         thead.classList.add('bg-primary','text-warning')
 
         const tr = document.createElement('tr')
+
         const tn = ['Nome do responsável','Email do responsável','Data de nascimento','Quantidade de pessoas','Data da viagem','Local de hospedagem','Valor total da hospedagem','Valor total do translado','Valor final']
 
         tn.forEach((dados)=>{
